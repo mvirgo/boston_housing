@@ -13818,6 +13818,8 @@ xRKfMcaYVsUSnzHGmFbl/wPidmLSmnAOSwAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The k-fold cross-validation training technique breaks the data into 'k' number of equal groups, holds out one group (k - 1 is the number of groups in the training data) for testing, and then runs through the testing for k number of times. This helps to avoid overfitting in the grid search, which would mean that the model very accurately predicts values for the given data set, but when given new data, would not be accurate.</p>
+<p>The way that k-fold cross-validation helps to increase accuracy is by taking an average score from k number of train / test experiments. This average leads to a more accurate score than just running it on a single train/test split - it could be that the initial split put it in a way that does not accurately represent the data otherwise (shuffling also helps prevent this issue).</p>
+<p>You can input your k-fold cross-validation into a grid search (as the cv variable) in order to get the best result from it.</p>
 
 </div>
 </div>
